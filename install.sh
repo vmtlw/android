@@ -24,7 +24,7 @@ com.google.android.googlequicksearchbox;
         adb shell pm uninstall -k --user 0 $i &>/dev/null;
 done
 
-#adb push backup*.zip  /sdcard/Download
-#adb root
-#adb remount /vendor
-#adb shell grep service.adb.tcp.port /vendor/build.prop && adb shell sed -i '/service.adb.tcp.port/s/=.*/=2002/' /vendor/build.prop || adb shell echo service.adb.tcp.port=2002 >> /vendor/build.prop && adb shell reboot
+adb push backup*.zip  /sdcard/Download
+adb root
+adb remount /vendor
+adb shell grep service.adb.tcp.port /vendor/build.prop && adb shell sed -i '/service.adb.tcp.port/s/=.*/=2002/' /vendor/build.prop || adb shell echo service.adb.tcp.port=2002 >> /vendor/build.prop && adb shell reboot
